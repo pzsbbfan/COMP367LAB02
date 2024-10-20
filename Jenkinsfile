@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/pzsbbfan/COMP367LAB02.git'
+                git branch: 'main', url: 'https://github.com/pzsbbfan/COMP367LAB02.git'
             }
         }
         stage('Build') {
