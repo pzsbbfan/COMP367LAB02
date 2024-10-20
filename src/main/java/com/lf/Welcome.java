@@ -14,17 +14,17 @@ import static java.lang.System.out;
 public class Welcome extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-        response.getWriter();
+
 
         LocalTime currentTime = LocalTime.now();
         String greeting;
 
         if (currentTime.isBefore(LocalTime.NOON)) {
-            greeting = "Good morning";
+            greeting = "Good morning, Lucas";
         } else {
-            greeting = "Good afternoon";
+            greeting = "Good afternoon, Lucas";
         }
+        response.getWriter().write(greeting);
 
-        out.println("<h1>" + greeting + ", Lucas! Welcome to COMP367</h1>");
     }
 }
